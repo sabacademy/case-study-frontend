@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>Sabacademy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<body>
+    <!-- !PAGE CONTENT! -->
+    <div id="main" class="main" style="margin-left:10px;margin-top:55px;">
+
+        <!-- Header -->
+        <header>
+            <h1>
+                <b>
+                    <i class="fa fa-users"></i> Gestione utenti</b>
+            </h1>
+        </header>
+
+
+        <div class="row" style="height: calc(100% - 79px);">
+            <div class="col col-12" style="height: 100%;">
+                <div class="panel-box" style="height:calc(100% - 30px);">
+                    <div class="panel-box-header"></div>
+                    <div class="panel-box-body">
+                        <div class="row">
+                            <div class="col col-12" style="text-align: end">
+                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#createTeacher">
+                                    <i class="fa fa-plus"></i> Aggiungi utente</button>
+                            </div>
+                            <div class="col col-12">
+                                <table class="table table-bordered" style="text-align: center">
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Cognome</th>
+                                        <th>Email</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Antonio</td>
+                                        <td>Lor&egrave;</td>
+                                        <td>antonio.lore@intelle-go.it</td>
+                                        <td>
+                                            <i class="fa fa-circle" style="cursor:pointer; color:green"
+                                                title="Didsabilita docente"></i>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
+                                                data-toggle="modal" data-target="#editTeacher"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
+                                                title="Elimina docente" data-toggle="modal"
+                                                data-target="#deleteTeacher"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Francesco</td>
+                                        <td>Giusto</td>
+                                        <td>francesco.giusto@intelle-go.it</td>
+                                        <td>
+                                            <i class="fa fa-circle" style="cursor:pointer; color:green"
+                                                title="Disabilita docente"></i>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
+                                                data-toggle="modal" data-target="#editTeacher"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
+                                                title="Elimina docente" data-toggle="modal"
+                                                data-target="#deleteTeacher"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rosa</td>
+                                        <td>Vox</td>
+                                        <td>rosa.vox@intelle-go.it</td>
+                                        <td>
+                                            <i class="fa fa-circle" style="cursor:pointer; color:red"
+                                                title="Abilita docente"></i>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
+                                                data-toggle="modal" data-target="#editTeacher"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
+                                                title="Elimina docente" data-toggle="modal"
+                                                data-target="#deleteTeacher"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andrea</td>
+                                        <td>Mariani</td>
+                                        <td>andrea.mariani@intelle-go.it</td>
+                                        <td>
+                                            <i class="fa fa-circle" style="cursor:pointer; color:red"
+                                                title="Abilita docente"></i>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
+                                                data-toggle="modal" data-target="#editTeacher"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
+                                                title="Elimina docente" data-toggle="modal"
+                                                data-target="#deleteTeacher"></i>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

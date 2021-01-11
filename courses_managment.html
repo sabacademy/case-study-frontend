@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="css/template.css">
+<link rel="stylesheet" href="style.css">
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -21,7 +21,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/template.js"></script>
 
 <body>
 
@@ -62,7 +61,7 @@
                                             <i class="fa fa-circle" style="cursor:pointer; color:green"
                                                 title="Disattiva corso"></i>
                                             <i id="editC" class="fa fa-edit" style="cursor:pointer"
-                                                title="Modifica corso"></i>
+                                                onclick="openEditCourse()" title="Modifica corso"></i>
                                             <i class="fa fa-calendar" style="cursor:pointer" title="Pianifica"
                                                 data-toggle="modal" data-target="#planCourse"></i>
                                             <i class="fa fa-trash" style="cursor:pointer;color:red"
@@ -77,7 +76,7 @@
                                             <i class="fa fa-circle" style="cursor:pointer; color:green"
                                                 title="Disattiva corso"></i>
                                             <i id="editC" class="fa fa-edit" style="cursor:pointer"
-                                              title="Modifica corso"></i>
+                                                onclick="openEditCourse()" title="Modifica corso"></i>
                                             <i class="fa fa-calendar" style="cursor:pointer" title="Pianifica"
                                                 data-toggle="modal" data-target="#planCourse"></i>
                                             <i class="fa fa-trash" style="cursor:pointer;color:red"
@@ -92,7 +91,7 @@
                                             <i class="fa fa-circle" style="cursor:pointer; color:red"
                                                 title="Attiva corso"></i>
                                             <i id="editC" class="fa fa-edit" style="cursor:pointer"
-                                               title="Modifica corso"></i>
+                                                onclick="openEditCourse()" title="Modifica corso"></i>
                                             <i class="fa fa-calendar" style="cursor:pointer" title="Pianifica"
                                                 data-toggle="modal" data-target="#planCourse"></i>
                                             <i class="fa fa-trash" style="cursor:pointer;color:red"
@@ -107,7 +106,7 @@
                                             <i class="fa fa-circle" style="cursor:pointer; color:red"
                                                 title="Attiva corso"></i>
                                             <i id="editC" class="fa fa-edit" style="cursor:pointer"
-                                                title="Modifica corso"></i>
+                                                onclick="openEditCourse()" title="Modifica corso"></i>
                                             <i class="fa fa-calendar" style="cursor:pointer" title="Pianifica"
                                                 data-toggle="modal" data-target="#planCourse"></i>
                                             <i class="fa fa-trash" style="cursor:pointer;color:red"
@@ -320,7 +319,11 @@ aria-hidden="true">
 
     <!-- End page content -->
 
-  
+    <script>
+        function openEditCourse() {
+            window.open("edit_course.html", "_self");
+        }
+    </script>
 </body>
 
 </html>

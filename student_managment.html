@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<title>Sabacademy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="css/template.css">
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/template.js"></script>
+
+<body>
+
+    <!-- !PAGE CONTENT! -->
+    <div id="main" class="main" style="margin-left:10px;margin-top:55px;">
+
+        <!-- Header -->
+        <header>
+            <h1>
+                <b>
+                    <i class="fa fa-users"></i> Gestione allievi</b>
+            </h1>
+        </header>
+
+
+        <div class="row" style="height: calc(100% - 79px);">
+            <div class="col col-12" style="height: 100%;">
+                <div class="panel-box" style="height:calc(100% - 30px);">
+                    <div class="panel-box-header"></div>
+                    <div class="panel-box-body">
+                        <div class="row">
+                            <div class="col col-12" style="text-align: end">
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createStudent">
+                                    <i class="fa fa-plus"></i> Aggiungi allievo</button>
+                            </div>
+                            <div class="col col-12">
+                                <table class="table table-bordered" style="text-align: center">
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Cognome</th>
+                                        <th>Email</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Cosimo</td>
+                                        <td>Tripaldi</td>
+                                        <td>mimmotripaldi1997@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grei</td>
+                                        <td>Gashi</td>
+                                        <td>ggashi18@epoka.edu.al</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mirko</td>
+                                        <td>Castria</td>
+                                        <td>mirkocastria@live.it</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cristian</td>
+                                        <td>Fersini</td>
+                                        <td>fersinicristian@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Roberto</td>
+                                        <td>Ciancio</td>
+                                        <td>ciancio.roberto96@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bashkim</td>
+                                        <td>Darkoli</td>
+                                        <td>Dakolibashkim@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rei</td>
+                                        <td>Mandija</td>
+                                        <td>rmandija14@epoka.edu.al</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Klevis</td>
+                                        <td>Ngjela</td>
+                                        <td>ngjela11@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giuseppe Giorgio</td>
+                                        <td>Mininno</td>
+                                        <td>mininno.giorgio@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fabio</td>
+                                        <td>Rossano</td>
+                                        <td>fabiorossano77@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aurelio</td>
+                                        <td>Zizzo</td>
+                                        <td>Aurelio.zizzo00@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cosimo Francesco</td>
+                                        <td>Spinelli</td>
+                                        <td>Spinellicosimofrancesco@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andrea</td>
+                                        <td>Petrelli</td>
+                                        <td>dott.petrelli@gmail.com</td>
+                                        <td>
+                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica allievo" data-toggle="modal" data-target="#editStudent"></i>
+                                            <i class="fa fa-trash" style="cursor:pointer;color:red" title="Elimina allievo" data-toggle="modal" data-target="#deleteStudent"></i>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <!-- Footer -->
+    <footer class="ligth-grey footer-academy">
+        <p>Powered by Sabacademy</p>
+    </footer>
+
+    <!-- End page content -->
+    </div>
+</body>
+
+</html>

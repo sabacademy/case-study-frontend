@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<title>Sabacademy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/template.js"></script>
+
+<body>
+    <!-- Top container -->
+    <header id="" class="topbar-academy">
+        <button id="sidebarToggle" class="sab-button" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        <span class="logo-topbar">
+            <img src="images/logo_academy-removebg-preview.png" alt="logo_accademy" width="200px" />
+        </span>
+    </header>
+
+    <!-- Sidebar/menu -->
+    <nav class="sidebar sidebar-collapse green-sidebar sidebar-animate-right" id="mySidebar">
+        <div class="row top-sidebar">
+            <div class="col-4">
+                <img src="images/female.svg" class="circle-image avatar-sidebar" alt="avatar">
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <span>Benvenuto,
+                            <strong>Nome_Utente</strong>
+                        </span>
+                    </div>
+                    <!-- <div class="col col-12">
+                            <a href="#" class="col col-2 sab-button">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                            <a href="#" class="col col-2 sab-button">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <a href="#" class=" col col-2 sab-button">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row col col-12">
+            <ul class="nav-item">
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-dashboard"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="course_planning.html">
+                        <i class="fa fa-calendar"></i> Pianificazione corsi</a>
+                </li>
+                <li>
+                    <a href="courses_managment.html">
+                        <i class="fa fa-book"></i> Gestione corsi</a>
+                </li>
+                <li>
+                    <a href="users_managment.html">
+                        <i class="fa fa-users"></i> Gestione utenti</a>
+                </li>
+                <li>
+                    <a href="student_managment.html">
+                        <i class="fa fa-graduation-cap"></i> Gestione allievi</a>
+                </li>
+                <!--    <li>
+                <a href="attendance_register.html">
+                    <i class="fa fa-tasks"></i> Registro presenze</a>
+            </li>-->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- !PAGE CONTENT! -->
+    <div id="main" class="main">
+
+        <!-- Header -->
+        <header>
+            <h1>
+                <b>
+                    <i class="fa fa-dashboard"></i> Dashboard</b>
+            </h1>
+        </header>
+
+        <div class="row" style="height: calc(100% - 79px);">
+            <div class="col col-12" style="height: 100%;">
+                <div class="panel-box" style="height:calc(100% - 30px);">
+                    <div class="panel-box-header">
+                        <label>Calendario pianificazione corsi</label>
+                    </div>
+                    <div class="panel-box-body">
+                        <div class="row">
+                            <div class="col col-12">
+                                <h3>Corsi attivi</h3>
+                            </div>
+                            <div class="col col-12">
+                                <div class="outer">
+                                    <table class="table table-bordered" style="text-align: center">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Titolo del corso</th>
+                                                <th>Nome docente</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>L1</td>
+                                                <td>Fondamenti di Java</td>
+                                                <td>Antonio Lor&egrave;</td>
+                                                <td>
+                                                    <a class="fa fa-pencil" style="cursor:pointer" href="attendance_register.html" title="Compila registro"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>L1</td>
+                                                <td>Introduzione ad HTML</td>
+                                                <td>Rosa Vox</td>
+                                                <td>
+                                                    <a class="fa fa-pencil" style="cursor:pointer" href="attendance_register.html" title="Compila registro"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>L1</td>
+                                                <td>Introduzione a Spring Framework</td>
+                                                <td>Francesco Giusto</td>
+                                                <td>
+                                                    <a class="fa fa-pencil" style="cursor:pointer" href="attendance_register.html" title="Compila registro"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>L1</td>
+                                                <td>Introduzione ad Angular</td>
+                                                <td>Andrea Mariani</td>
+                                                <td>
+                                                    <a class="fa fa-pencil" style="cursor:pointer" href="attendance_register.html" title="Compila registro"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ligth-grey footer-academy">
+        <p>Powered by Sabacademy</p>
+    </footer>
+
+    <!-- End page content -->
+    </div>
+</body>
+
+</html>

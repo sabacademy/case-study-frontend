@@ -12,12 +12,20 @@ body {
     box-sizing: inherit; 
 }
 
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display:block;
+}
 
 label {
     font-weight: bold;
     font-size: 16px;
 }
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+.light-grey {
+    background-color: #d3d3d32b;
+    color:black;
+}
 
 .topbar-academy, .topbar-academy:hover {
     top: 0;
@@ -37,6 +45,67 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     color: black;
 }
 
+.logo-topbar {
+    top: 0;
+    right: 0;
+    position:fixed;
+}
+
+.sidebar {
+    height: calc(100% - 25px);
+    display: none;
+    position: fixed;
+    overflow: auto;
+    width: 300px;
+    top: 45px;
+}
+.sidebar .sidebar-collapse {
+    display:none;
+}
+.sidebar-animate-left{animation:animateleft 0.4s}
+.sidebar-animate-right{position:relative; animation:animarerigth 0.4s}
+
+@keyframes animateleft
+{
+    from{left:-300px;opacity:0} to{left:0;opacity:1}
+}
+@keyframes animateright
+{
+    from{rigth:0;opacity:1} to{right:-300px;opacity:0}
+}
+.top-sidebar {
+    background-color: #ecf3da;
+    color: black;
+    height: 65px;
+}
+
+.title-sidebar {
+    text-align: center;
+    color:white;
+}
+
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    .main {
+        height: calc(100% - 100px);
+        overflow: auto;
+        margin-left: 0;
+        margin-top:55px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+
 
 .main {
     height: calc(100% - 100px);
@@ -52,6 +121,28 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     margin-top:55px;
 
 }
+.light-sidebar {
+    background-color: white;
+    color: black;
+}
+
+.green-sidebar {
+    background-color: #1f9b88;
+    color:white;
+}
+
+.footer-academy {
+    padding-bottom: 16px;
+    padding-bottom: 16px;
+    background: #3c3939;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    color: white;
+    text-align: center;
+}
+
 
 /*GRIGLIA*/
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg,
@@ -68,11 +159,58 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     margin-right: 0px;
     margin-left: 0px;
 }
-ine-height: 1.8;
+.circle-image {
+    border-radius: 50%;
 }
 
+.avatar-sidebar {
+    width: 55px;
+    margin-left: 20px;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+ul.nav-item li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul.nav-item li {
+    line-height: 1.8;
+}
 .text-center {
     text-align: center;
+}
+
+.login-page {
+    height: auto;
+    background: #d2d6de;
+    background-image: url(../images/sfondo_academy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-box {
+    width: 360px;
+    margin: 15% auto;
+}
+
+.login-box-body {
+    background-color: #6ce0ce6e;
+    min-height: 270px;
+    width: 450px;
+    border: 1px solid #6ce0ce6e;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px black
+}
+
+.login-message {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
 }
 
 .form-control {
@@ -88,6 +226,20 @@ ine-height: 1.8;
     margin-top: 3%;
 }
 
+.saba-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+label.check {
+    font-size: 18px;
+}
 .btn {
     height: 30px;
     min-width: 80PX;
@@ -97,6 +249,21 @@ ine-height: 1.8;
 }
 btn:active {
     border: yellow;
+}
+.btn-login{
+    color:white;
+    background-color: #1f9b88;
+}
+
+
+@media only screen and (max-width: 640) {
+    /* For mobile phones: */
+ .login-box {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 12%;   
+    }
+
 }
 
 table {

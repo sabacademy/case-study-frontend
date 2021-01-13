@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>Sabacademy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="css/template.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/template.js"></script>
+
+<body class="login-page">
+  <div class="login-box">
+    <div class="login-box-body">
+      <div class="login-message">
+        <p>
+          <strong>Entra per iniziare la tua sessione</strong>
+        </p>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-12 form-group">
+            <div class="row">
+              <div class="col-11">
+                <input class="form-control" name="username" type="text" placeholder="Username" />
+              </div>
+              <div class="col-1 icon-login">
+                <i class="fa fa-envelope"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <div class="row">
+              <div class="col-11">
+                <input class="form-control" name="pwd" type="password" placeholder="Password" />
+              </div>
+              <div class="col col-1 icon-login">
+                <i class="fa fa-lock"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <!-- <div class="col col-6">
+                <input class="saba-checkbox" name="ricordami" type="checkbox" />
+                <label class="check">Ricordami</labelZ>
+              </div> -->
+            <div class="col-12" style="text-align: end">
+              <button type="submit" class="btn btn-login">LogIn</button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="msg-alert msg-error">
+              <label class="text-msg"><i class="fa fa-times"></i> Email o password errati </label>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+            <div class="msg-alert msg-success">
+              <label class="text-msg"><i class="fa fa-check"></i> Email o password corretti </label>
+            </div>
+          </div> -->
+          <div class="col-12 form-group">
+            <a href="recover_password.html">Recupero credenziali</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

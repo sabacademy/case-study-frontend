@@ -187,7 +187,7 @@ ul.nav-item li {
 .login-page {
     height: auto;
     background: #d2d6de;
-    background-image: url(../images/sfondo_academy.png);
+    background-image: url(images/sfondo_academy.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

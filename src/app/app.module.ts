@@ -10,6 +10,10 @@ import { TutorsComponent } from './components/tutors/tutors.component';
 import { StudentsComponent } from './components/students/students.component';
 import { AttendanceRegisterComponent } from './components/attendance-register/attendance-register.component';
 import { RouterModule } from '@angular/router';
+import { UserManagementComponent } from './components/user-management/user-management.component';
+import { TopHeaderComponent } from './components/top-header/top-header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MainNavigationMenuComponent } from './components/main-navigation-menu/main-navigation-menu.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { RouterModule } from '@angular/router';
     CoursesComponent,
     TutorsComponent,
     StudentsComponent,
-    AttendanceRegisterComponent
+    AttendanceRegisterComponent,
+    UserManagementComponent,
+    TopHeaderComponent,
+    FooterComponent,
+    MainNavigationMenuComponent
   ],
   imports: [
     RouterModule,

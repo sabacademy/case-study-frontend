@@ -14,6 +14,10 @@ import { UserManagementComponent } from './components/user-management/user-manag
 import { TopHeaderComponent } from './components/top-header/top-header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainNavigationMenuComponent } from './components/main-navigation-menu/main-navigation-menu.component';
+import { UserManagementModalComponent } from './components/user-management/user-management-modal/user-management-modal.component';
+import { UserManagementConfirmModalComponent } from './components/user-management/user-management-confirm-modal/user-management-confirm-modal.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,17 @@ import { MainNavigationMenuComponent } from './components/main-navigation-menu/m
     UserManagementComponent,
     TopHeaderComponent,
     FooterComponent,
-    MainNavigationMenuComponent
+    MainNavigationMenuComponent,
+    UserManagementModalComponent,
+    UserManagementConfirmModalComponent
   ],
   imports: [
     RouterModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    BrowserModule
   ],
   bootstrap: [AppComponent]
 })

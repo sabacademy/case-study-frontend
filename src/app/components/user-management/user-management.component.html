@@ -1,239 +1,52 @@
+<header>
+    <h1>
+        <b><i class="fa fa-users"></i> Gestione utenti</b>
+    </h1>
+</header>
 
-        <!-- Header -->
-        <header>
-            <h1>
-                <b>
-                    <i class="fa fa-users"></i> Gestione utenti</b>
-            </h1>
-        </header>
-
-
-        <div class="row" style="height: calc(100% - 79px);">
-            <div class="col col-12" style="height: 100%;">
-                <div class="panel-box" style="height:calc(100% - 30px);">
-                    <div class="panel-box-header"></div>
-                    <div class="panel-box-body">
-                        <div class="row">
-                            <div class="col col-12" style="text-align: end">
-                                <button type="button" class="btn btn-success" data-toggle="modal"
-                                    data-target="#createTeacher">
-                                    <i class="fa fa-plus"></i> Aggiungi utente</button>
-                            </div>
-                            <div class="col col-12">
-                                <table class="table table-bordered" style="text-align: center">
+<div class="row" style="height: calc(100% - 79px);">
+    <div class="col col-12" style="height: 100%;">
+        <div class="panel-box" style="height:calc(100% - 30px);">
+            <div class="panel-box-header"></div>
+            <div class="panel-box-body">
+                <div class="row">
+                    <div class="col col-12" style="text-align: end">
+                        <button type="button" class="btn btn-success" (click)="openModal()">
+                            <i class="fa fa-plus"></i> Aggiungi utente</button>
+                    </div>
+                    <div class="col col-12">
+                        <table class="table table-bordered" style="text-align: center">
+                            <thead>
+                                <tr>
+                                    <ng-container *ngFor="let column of columns">
+                                        <th>{{column.header}}</th>
+                                    </ng-container>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let user of users">
                                     <tr>
-                                        <th>Nome</th>
-                                        <th>Cognome</th>
-                                        <th>Email</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Antonio</td>
-                                        <td>Lor&egrave;</td>
-                                        <td>antonio.lore@intelle-go.it</td>
+                                        <td>{{user.name}}</td>
+                                        <td>{{user.surname}}</td>
+                                        <td>{{user.email}}</td>
                                         <td>
-                                            <i class="fa fa-circle" style="cursor:pointer; color:green"
-                                                title="Didsabilita docente"></i>
-                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
-                                                data-toggle="modal" data-target="#editTeacher"></i>
-                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
-                                                title="Elimina docente" data-toggle="modal"
-                                                data-target="#deleteTeacher"></i>
+                                            <i class="fa fa-circle" [style]="{ 'cursor': 'pointer', 'color': user.enabled ? 'green' : 'red' }" title="Disabilita docente" (click)="disable(user)"></i>
+                                            <i class="fa fa-edit"   style="cursor:pointer" title="Modifica docente" (click)="openModal(user)"></i>
+                                            <i class="fa fa-trash"  style="cursor:pointer;color:red" title="Elimina docente" (click)="openConfirmModal(user)"></i>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Francesco</td>
-                                        <td>Giusto</td>
-                                        <td>francesco.giusto@intelle-go.it</td>
-                                        <td>
-                                            <i class="fa fa-circle" style="cursor:pointer; color:green"
-                                                title="Disabilita docente"></i>
-                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
-                                                data-toggle="modal" data-target="#editTeacher"></i>
-                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
-                                                title="Elimina docente" data-toggle="modal"
-                                                data-target="#deleteTeacher"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rosa</td>
-                                        <td>Vox</td>
-                                        <td>rosa.vox@intelle-go.it</td>
-                                        <td>
-                                            <i class="fa fa-circle" style="cursor:pointer; color:red"
-                                                title="Abilita docente"></i>
-                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
-                                                data-toggle="modal" data-target="#editTeacher"></i>
-                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
-                                                title="Elimina docente" data-toggle="modal"
-                                                data-target="#deleteTeacher"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Andrea</td>
-                                        <td>Mariani</td>
-                                        <td>andrea.mariani@intelle-go.it</td>
-                                        <td>
-                                            <i class="fa fa-circle" style="cursor:pointer; color:red"
-                                                title="Abilita docente"></i>
-                                            <i class="fa fa-edit" style="cursor:pointer" title="Modifica docente"
-                                                data-toggle="modal" data-target="#editTeacher"></i>
-                                            <i class="fa fa-trash" style="cursor:pointer;color:red"
-                                                title="Elimina docente" data-toggle="modal"
-                                                data-target="#deleteTeacher"></i>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+                                </ng-container>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
- <!-- Elimina Modal-->
- <div class="modal fade" id="deleteTeacher" tabindex="-1" role="dialog" aria-labelledby="deleteTeacher"
- aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered" role="document">
-     <div class="modal-content">
-         <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLongTitle">Elimina utente</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-             </button>
-         </div>
-         <div class="modal-body">
-             l'utente nome_utente verr&agrave; eliminato. Proseguire?
-         </div>
-         <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-             <button type="button" class="btn btn-success">Si</button>
-         </div>
-     </div>
- </div>
-</div>
-<!--Fine-->
-
- <!-- Crea Utente Modal-->
- <div class="modal fade" id="createTeacher" tabindex="-1" role="dialog" aria-labelledby="createTeacherLabel"
- aria-hidden="true">
- <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-     <div class="modal-content">
-         <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLongTitle">Aggiungi utente</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-             </button>
-         </div>
-         <div class="modal-body">
-             <form novalidate>
-                 <div class="row">
-                     <div class="col col-12">
-                         <label class="col col-12">Tipo utente</label>
-                         <div class="col col-12">
-                             <select class="form-control">
-                                 <option></option>
-                                 <option value="cordinatore">Cordinatore</option>
-                                 <option value="docente">Docente</option>
-                             </select>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col col-12">
-                         <label class="col col-12">Nome</label>
-                         <div class="col col-12">
-                             <input type="text" class="form-control" />
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col col-12">
-                         <label class="col col-12">Cognome</label>
-                         <div class="col col-12">
-                             <input type="text" class="form-control" />
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col col-12">
-                         <label class="col col-12">Email</label>
-                         <div class="col col-12">
-                             <input type="email" class="form-control" />
-                         </div>
-                     </div>
-                 </div>
-             </form>
-
-         </div>
-         <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-             <button type="button" class="btn btn-success">Salva</button>
-         </div>
-     </div>
- </div>
-</div>
-<!--Fine-->
-
-
-
-<!-- Modifica utente Modal-->
-<div class="modal fade" id="editTeacher" tabindex="-1" role="dialog" aria-labelledby="editTeacher"
-aria-hidden="true">
-<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modifica utente</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form novalidate>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-12">
-                            <label>Nome</label>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" value="Antonio">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="col-12">
-                            <label>Cognome</label>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" value="Lorè">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="col-12">
-                            <label>Email</label>
-                        </div>
-                        <div class="col-12">
-                            <input type="email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="col-12">
-                            <label>Password</label>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12"></div>
-
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-            <button type="button" class="btn btn-success">Salva</button>
-        </div>
     </div>
 </div>
-</div>
-<!--Fine-->
-<!--</html>-->
+
+<!-- MASCHERA MODALE PER CONFERMA ELIMINAZIONE UTENTE -->
+<app-user-management-confirm-modal #confirmModal (OnConfirm)="delete($event)"></app-user-management-confirm-modal>
+
+<!-- MASCHERA MODALE PER INSERIMENTO/MODIFICA UTENTE -->
+<app-user-management-modal #modal (OnSave)="saveNewUser($event)"></app-user-management-modal>

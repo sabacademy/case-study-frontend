@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserManagementService } from 'src/app/services/user-management.service';
+import { FeedbackMessageComponent } from '../feedback-message/feedback-message.component';
 import { UserManagementConfirmModalComponent } from './user-management-confirm-modal/user-management-confirm-modal.component';
 import { UserManagementModalComponent } from './user-management-modal/user-management-modal.component';
 
@@ -19,6 +20,7 @@ export class UserManagementComponent implements OnInit {
 
   @ViewChild('modal', {static: false}) modal: UserManagementModalComponent;
   @ViewChild('confirmModal', {static: false}) confirmModal: UserManagementConfirmModalComponent;
+  @ViewChild('feedbackMessage', {static: false}) feedbackMessage: FeedbackMessageComponent;
 
   constructor(private userService: UserManagementService) { }
 
@@ -123,7 +125,10 @@ export class UserManagementComponent implements OnInit {
     // TODO - SAVE ON REAL DATA
 
     // Feedback message
-    alert('Salvataggio effettuato');
+    // alert('Salvataggio effettuato');
+
+    // Feedback message with component
+    this.feedbackMessage.showSuccess('Salvataggio effettuato');
 
     this.closeModal();
   }
@@ -135,7 +140,10 @@ export class UserManagementComponent implements OnInit {
     // TODO - SAVE ON REAL DATA
 
     // Feedback message
-    alert('Salvataggio effettuato');
+    // alert('Salvataggio effettuato');
+
+    // Feedback message with component
+    this.feedbackMessage.showSuccess('Salvataggio effettuato');
 
     this.closeModal();
   }
@@ -148,7 +156,10 @@ export class UserManagementComponent implements OnInit {
     // TODO - DISABLE ON REAL DATA
 
     // Feedback message
-    alert('Utente ' + (!user.enabled ? 'disabilitato' : 'abilitato') );
+    // alert('Utente ' + (!user.enabled ? 'disabilitato' : 'abilitato') );
+
+    // Feedback message with component
+    this.feedbackMessage.showSuccess('Utente ' + (!user.enabled ? 'disabilitato' : 'abilitato'));
   }
 
   public delete(user: User): void {
@@ -157,7 +168,10 @@ export class UserManagementComponent implements OnInit {
     this.users.splice(this.users.findIndex( u => user.id === u.id), 1);
 
     // Feedback message
-    alert('Utente eliminato');
+    // alert('Utente eliminato');
+
+    // Feedback message with component
+    this.feedbackMessage.showSuccess('Utente eliminato');
 
     this.closeConfirmModal();
   }

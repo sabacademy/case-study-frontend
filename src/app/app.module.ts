@@ -18,6 +18,7 @@ import { UserManagementModalComponent } from './components/user-management/user-
 import { UserManagementConfirmModalComponent } from './components/user-management/user-management-confirm-modal/user-management-confirm-modal.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FeedbackMessageComponent } from './components/feedback-message/feedback-message.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     MainNavigationMenuComponent,
     UserManagementModalComponent,
-    UserManagementConfirmModalComponent
+    UserManagementConfirmModalComponent,
+    FeedbackMessageComponent
   ],
   imports: [
     RouterModule,

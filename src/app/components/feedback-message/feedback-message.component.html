@@ -1,0 +1,17 @@
+<div class="col-12">
+    <ng-container *ngIf="success">
+        <div class="msg-alert msg-success">
+            <label class="text-msg"><i class="fa fa-times"></i> {{errorMessage}} </label>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="warning">
+        <div class="msg-alert msg-warning">
+            <label class="text-msg"><i class="fa fa-times"></i> {{errorMessage}} </label>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="error">
+        <div class="msg-alert msg-error">
+        <label class="text-msg"><i class="fa fa-times"></i> {{errorMessage}} </label>
+        </div>
+    </ng-container>
+</div>

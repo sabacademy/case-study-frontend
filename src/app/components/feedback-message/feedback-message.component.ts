@@ -35,7 +35,7 @@ export class FeedbackMessageComponent implements OnInit {
     this.success = false;
     this.warning = false;
     this.error = false;
-    this.errorMessage = null;
+    this.errorMessage = '';
   }
 
 }

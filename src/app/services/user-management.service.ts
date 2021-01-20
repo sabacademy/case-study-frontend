@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
@@ -6,7 +8,7 @@ import { User } from '../models/user';
 })
 export class UserManagementService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   /**
    * Get all users
@@ -55,9 +57,8 @@ export class UserManagementService {
    * Get all users
    * Real data
    */
-  public getUsers(): User[] {
-    // TODO Observable
-    return [];
+  public getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:8080/users');
   }
 
   public saveUser(user: User): void {

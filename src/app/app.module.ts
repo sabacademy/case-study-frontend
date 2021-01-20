@@ -19,6 +19,8 @@ import { UserManagementConfirmModalComponent } from './components/user-managemen
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FeedbackMessageComponent } from './components/feedback-message/feedback-message.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UserManagementService } from './services/user-management.service';
 
 @NgModule({
   declarations: [
@@ -40,11 +42,13 @@ import { FeedbackMessageComponent } from './components/feedback-message/feedback
   imports: [
     RouterModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
     BrowserModule
   ],
+  providers: [UserManagementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

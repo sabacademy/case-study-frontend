@@ -98,6 +98,17 @@ export class UserManagementComponent implements OnInit {
     this.users = this.userService.getMockUsers();
   }
 
+  private loadData(): void {
+    this.userService.getUsers().subscribe(
+      usrList => {
+        this.users = usrList;
+      },
+      error => {
+        // TODO erro toString() OR exact model property
+        this.feedbackMessage.showError(error);
+      });
+  }
+
   public openModal(user?: User): void {
     this.showModal = true;
     this.modal.open(user);

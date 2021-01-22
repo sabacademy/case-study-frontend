@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserManagementService } from 'src/app/services/user-management.service';
 import { FeedbackMessageComponent } from '../feedback-message/feedback-message.component';
@@ -22,8 +22,8 @@ export class UserManagementComponent implements OnInit {
   @ViewChild('confirmModal', {static: false}) confirmModal: UserManagementConfirmModalComponent;
   @ViewChild('feedbackMessage', {static: false}) feedbackMessage: FeedbackMessageComponent;
 
-  constructor(private userService: UserManagementService) { }
-
+  constructor(private userService: UserManagementService) {}
+ 
   ngOnInit(): void {
     this.initColumns();
     this.loadUsers();
@@ -114,7 +114,7 @@ export class UserManagementComponent implements OnInit {
     this.modal.open(user);
   }
 
-  private closeModal(): void {
+  public closeModal(): void {
     this.showModal = false;
     this.modal.close();
   }

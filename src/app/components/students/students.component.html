@@ -1,1 +1,54 @@
-<p>students works!</p>
+<header>
+    <h1>
+        <b>
+            <i class="fa fa-users"></i> Gestione allievi</b>
+    </h1>
+</header>
+
+<app-feedback-message #feedbackMessage></app-feedback-message>
+
+<div class="row" style="height: calc(100% - 79px);">
+    <div class="col col-12" style="height: 100%;">
+        <div class="panel-box" style="height:calc(100% - 30px);">
+            <div class="panel-box-header"></div>
+            <div class="panel-box-body">
+                <div class="row">
+                    <div class="col col-12" style="text-align: end">
+                        <button type="button" class="btn btn-success" (click)="openModal()">
+                            <i class="fa fa-plus"></i> Aggiungi allievo</button>
+                    </div>
+                    <div class="col col-12">
+                        <table class="table table-bordered" style="text-align: center">
+                            <thead>
+                                <tr>
+                                    <ng-container *ngFor="let column of columns">
+                                        <th>{{column.header}}</th>
+                                    </ng-container>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let student of students">
+                                    <tr>
+                                        <td>{{student.name}}</td>
+                                        <td>{{student.surname}}</td>
+                                        <td>{{student.email}}</td>
+                                        <td>
+                                            <i class="fa fa-edit"   style="cursor:pointer" title="Modifica docente" (click)="openModal(student)"></i>
+                                            <i class="fa fa-trash"  style="cursor:pointer;color:red" title="Elimina docente" (click)="openConfirmModal(student)"></i>
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MASCHERA MODALE PER CONFERMA ELIMINAZIONE STUDENTE -->
+<app-students-confirm-modal #confirmModal (OnConfirm)="delete($event)"></app-students-confirm-modal>
+
+<!-- MASCHERA MODALE PER INSERIMENTO/MODIFICA STUDENTE -->
+<app-students-modal #modal (OnSave)="saveStudent($event)"></app-students-modal>

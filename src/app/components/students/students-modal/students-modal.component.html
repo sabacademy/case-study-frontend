@@ -1,0 +1,46 @@
+<div #createModifyStudent class="modal" id="createStudent" tabindex="-1" role="dialog" aria-labelledby="createStudent">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Aggiungi allievo</h5>
+                <button type="button" class="close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form novalidate>
+                    <div class="row">
+                        <div class="col col-12">
+                            <label class="col col-12">Nome</label>
+                            <div class="col col-12">
+                                <input id="name" name="name" type="text" class="form-control" [(ngModel)]="studentModel.name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                            <label class="col col-12">Cognome</label>
+                            <div class="col col-12">
+                                <input id="surname" name="surname" type="text" class="form-control" [(ngModel)]="studentModel.surname"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                            <label class="col col-12">Email</label>
+                            <div class="col col-12">
+                                <input id="email" name="email" type="email" class="form-control" [(ngModel)]="studentModel.email"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="close()">Annulla</button>
+                <button type="button" class="btn btn-success" (click)="save()">Salva</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showBackground" class="modal-backdrop fade show"></div>

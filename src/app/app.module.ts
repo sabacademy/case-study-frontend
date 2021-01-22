@@ -21,6 +21,8 @@ import { CommonModule } from '@angular/common';
 import { FeedbackMessageComponent } from './components/feedback-message/feedback-message.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserManagementService } from './services/user-management.service';
+import { StudentsModalComponent } from './components/students/students-modal/students-modal.component';
+import { StudentsConfirmModalComponent } from './components/students/students-confirm-modal/students-confirm-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { UserManagementService } from './services/user-management.service';
     MainNavigationMenuComponent,
     UserManagementModalComponent,
     UserManagementConfirmModalComponent,
-    FeedbackMessageComponent
+    FeedbackMessageComponent,
+    StudentsModalComponent,
+    StudentsConfirmModalComponent
   ],
   imports: [
     RouterModule,

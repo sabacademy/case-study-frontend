@@ -1,0 +1,32 @@
+<div #createModifyCourse class="modal" id="createCourse" tabindex="-1" role="dialog" aria-labelledby="createCourseLabel"
+   aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLongTitle">Crea corso</h5>
+               <button type="button" class="close" (click)="close()">
+                   <span aria-hidden="true">&times;</span>
+               </button>
+           </div>
+           <div class="modal-body">
+               <form novalidate>
+                   <div class="row">
+                       <div class="col-12">
+                           <label class="col-12">Nome Corso</label>
+                           <div class="col-12">
+                               <input id="title" name="title" type="text" class="form-control" [(ngModel)]="courseModel.title"/>
+                           </div>
+                       </div>
+                   </div>
+               </form>
+
+           </div>
+           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="close()">Annulla</button>
+            <button type="button" class="btn btn-success" (click)="save()">Salva</button>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div *ngIf="showBackground" class="modal-backdrop fade show"></div>

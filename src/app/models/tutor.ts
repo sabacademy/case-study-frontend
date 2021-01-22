@@ -1,9 +1,13 @@
+import { Course } from "./course";
+
 export class Tutor {
 
     private _id: string;
     private _name: string;
     private _surname: string;
     private _course: string;
+
+    public courses: Course[];
 
     constructor() {}
 

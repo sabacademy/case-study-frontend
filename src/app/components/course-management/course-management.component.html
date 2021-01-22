@@ -1,0 +1,55 @@
+<header>
+    <h1>
+        <b>
+            <i class="fa fa-table"></i> Gestione corsi</b>
+    </h1>
+</header>
+
+<app-feedback-message #feedbackMessage></app-feedback-message>
+
+<div class="row" style="height: calc(100% - 79px);">
+    <div class="col col-12" style="height: 100%;">
+        <div class="panel-box" style="height:calc(100% - 30px);">
+            <div class="panel-box-header"></div>
+            <div class="panel-box-body">
+                <div class="row">
+                    <div class="col col-12" style="text-align: end">
+                        <button type="button" class="btn btn-success" (click)="openModal()">
+                            <i class="fa fa-plus"></i> Crea corso</button>
+                    </div>
+                    <div class="col col-12">
+                        <table class="table table-bordered" style="text-align: center">
+                            <thead>
+                                <tr>
+                                    <ng-container *ngFor="let column of columns">
+                                        <th>{{column.header}}</th>
+                                    </ng-container>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let course of courses">
+                                    <tr>
+                                        <td>{{course.title}}</td>
+                                        <td>{{course.teacher}}</td>
+                                        <td>
+                                            <i class="fa fa-circle" [style]="{ 'cursor': 'pointer', 'color': course.enabled ? 'green' : 'red' }" title="Disabilita corso" (click)="disable(course)"></i>
+                                            <i class="fa fa-edit"   style="cursor:pointer" title="Modifica docente" (click)="openModal(course)"></i>
+                                            <i class="fa fa-calendar" style="cursor:pointer" title="Pianifica" (click)="openPlanner(course)"></i>
+                                            <i class="fa fa-trash"  style="cursor:pointer;color:red" title="Elimina docente" (click)="openConfirmModal(course)"></i>
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-course-management-confirm-modal #confirmModal (OnConfirm)="delete($event)"></app-course-management-confirm-modal>
+
+<app-course-management-modal #modal (OnSave)="saveCourse($event)"></app-course-management-modal>
+
+<app-course-management-planner #plannerModal (OnSave)="saveCourse($event)"></app-course-management-planner>

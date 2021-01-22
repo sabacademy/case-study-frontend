@@ -107,7 +107,7 @@ export class StudentsComponent implements OnInit {
     this.closeModal();
   }
 
-  private saveStudent(student: Student): void {
+  public saveStudent(student: Student): void {
     // SAVE MOCK DATA
     this.students.splice(this.students.findIndex( s => student.id === s.id), 1, student);
 

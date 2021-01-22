@@ -3,8 +3,12 @@ export class User {
     private _id: string;
     private _name: string;
     private _surname: string;
+
     private _email: string;
-    private _enabled: boolean;
+    public password: string;
+    public firstName: string;
+    public lastName: string;
+    private _enabled: boolean; // TODO -> active
 
     constructor() {}
 

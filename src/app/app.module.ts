@@ -23,6 +23,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserManagementService } from './services/user-management.service';
 import { StudentsModalComponent } from './components/students/students-modal/students-modal.component';
 import { StudentsConfirmModalComponent } from './components/students/students-confirm-modal/students-confirm-modal.component';
+import { CourseManagementComponent } from './components/course-management/course-management.component';
+import { CourseManagementConfirmModalComponent } from './components/course-management/course-management-confirm-modal/course-management-confirm-modal.component';
+import { CourseManagementModalComponent } from './components/course-management/course-management-modal/course-management-modal.component';
+import { CourseManagementPlannerComponent } from './components/course-management/course-management-planner/course-management-planner.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { StudentsConfirmModalComponent } from './components/students/students-co
     UserManagementConfirmModalComponent,
     FeedbackMessageComponent,
     StudentsModalComponent,
-    StudentsConfirmModalComponent
+    StudentsConfirmModalComponent,
+    CourseManagementComponent,
+    CourseManagementConfirmModalComponent,
+    CourseManagementModalComponent,
+    CourseManagementPlannerComponent
   ],
   imports: [
     RouterModule,
